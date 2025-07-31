@@ -1,7 +1,8 @@
 import React from 'react';
 import { useContent } from '../../hooks/useContent';
 import type { EducationContent } from '../../types/SectionsContents';
-import { FaExternalLinkAlt, FaCertificate, FaEye, FaFileAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaCertificate, //FaEye, 
+  FaFileAlt } from 'react-icons/fa';
 
 const Education: React.FC = () => {
   const { content, loading, error } = useContent<EducationContent>('education');

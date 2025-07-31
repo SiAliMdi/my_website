@@ -13,7 +13,7 @@ export default defineConfig({
   },
   server: {
     port: process.env.VITE_PORT ? parseInt(process.env.VITE_PORT) : 3000,
-    host: process.env.VITE_HOST || "localhost",
+    host: "0.0.0.0" //process.env.VITE_HOST || "localhost",
   },
   build: {
     outDir: path.resolve(__dirname, 'dist'),
