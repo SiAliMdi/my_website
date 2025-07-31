@@ -19,32 +19,29 @@ const chars = [
 const nom = chars.join("");
 
 const description =
-  "🎓 Ingénieur d'État en informatique et doctorant en traitement automatique du langage naturel. \
- Je possède une double expertise en intelligence artificielle 🤖 (modèles séquentiels, transformers) \
-ainsi que des compétences solides en développement logiciel. \
- Je cherche comment résoudre des problèmes fonctionnels à impact sociétal 🚀 grâce à ma polyvalence technique et ma passion pour l'innovation.";
+  "🎓 Doctorat en informatique avec une expertise en traitement du langage naturel. Je possède une double expertise en intelligence artificielle 🤖 (y compris les modèles séquentiels et les transformateurs) et de solides compétences en développement logiciel. Je suis passionné par l'exploitation de ma polyvalence technique pour résoudre des problèmes fonctionnels ayant un impact sociétal 🚀 et conduire une innovation significative.";
 
 export const aboutContent = {
-  title: "M. " + nom,
+  title: "Dr. " + nom,
   profileAlt: "Photo de profil de " + nom,
   description: description,
   educationTitle: "Formation",
   experienceTitle: "Expérience professionnelle",
   funTitle: "Faits amusants sur moi",
   educationItem1:
-    " Doctorant spécialisé en traitement automatique du langage naturel appliqué au domaine juridique 🔬",
+    "Doctorat en informatique, axé davantage sur le traitement du langage naturel appliqué au domaine juridique 🔬",
   educationItem2:
-    " Master + Ingéniorat d'État en Informatique, spécialité Systèmes d'Information 🎯",
+    "Master et diplôme d'ingénieur d'État en informatique, spécialité systèmes d'information 🎯",
   experienceItem1:
-    "Plus de 5 ans de R&D dans le domaine de l'intelligence artificielle et du traitement automatique du langage naturel 🧠",
+    "Plus de 5 ans d'expérience en recherche et développement dans le domaine de l'intelligence artificielle et du traitement du langage naturel 🧠",
   experienceItem2:
     "2 ans d'expérience en enseignement et mentorat académique 👨‍🏫",
   experienceItem3:
     " Expériences diversifiées en développement logiciel et architecture système 💻",
   funItem1:
-    "J'ai un permis de conduire B, mais je préfère me déplacer à vélo 🚴‍♂️ pour l'environnement et la santé !",
+    "Je suis titulaire d'un permis de conduire de catégorie B, mais je préfère faire la navette à vélo 🚴‍♂️ pour des raisons environnementales et de santé !",
   funItem2:
-    "Je suis un bon écouteur 👂et une source d'idées innovantes pour résoudre des défis complexes",
+    "Je suis adaptable et source d'idées novatrices pour résoudre des problèmes complexes.",
   funItem3:
-    "Passionné de natation 🏊‍♂️ et plongeur sous-marine niveau 1 certifié",
+    "Passionné de natation 🏊‍♂️ et  plongeur certifié de niveau 1.",
 };

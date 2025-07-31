@@ -18,33 +18,30 @@ const chars = [
 ];
 const name = chars.join("");
 const description =
-  "🎓 State Engineer in Computer Science and PhD candidate in Natural Language Processing. \
-I possess dual expertise in artificial intelligence 🤖 (sequential models, transformers) \
-as well as solid skills in software development. \
-I explore how to solve functional problems with societal impact 🚀 through my technical versatility and passion for innovation.";
+  "🎓 PhD in Computer Science with expertise in Natural Language Processing. I possess dual expertise in artificial intelligence 🤖 (including sequential models and transformers) and strong skills in software development. I am passionate about leveraging my technical versatility to address functional problems with societal impact 🚀 and drive meaningful innovation.";
 
 export const aboutContent = {
   // title: "About Me 👋",
-  title: "Mr. " +name,
+  title: "Dr. " +name,
   profileAlt: "Profile picture of " + name,
   description: description,
   educationTitle: "Education",
   experienceTitle: "Professional Experience",
   funTitle: "Fun Facts About Me",
   educationItem1:
-    "PhD candidate specializing in Natural Language Processing applied to the legal domain 🔬",
+    "PhD in computer science, focused more on Natural Language Processing applied to the legal domain 🔬",
   educationItem2:
-    "Master's + State Engineering Degree in Computer Science, specializing in Information Systems 🎯",
+    "Master's and State Engineering Degree in Computer Science, specializing in Information Systems 🎯",
   experienceItem1:
-    "Over 5 years of R&D in artificial intelligence and natural language processing 🧠",
+    "Over 5 years of research and development experience in artificial intelligence and natural language processing 🧠",
   experienceItem2:
-    "2 years of experience in teaching and academic mentoring 👨‍🏫",
+    "2 years of teaching and academic mentoring 👨‍🏫",
   experienceItem3:
-    "Diverse experience in software development and system architecture 💻",
+    "Broad experience in software development and system architecture 💻",
   funItem1:
-    "I have a B driving license, but I prefer commuting by bike 🚴‍♂️ for the environment and health!",
+    "I hold a category B driving license, but I prefer commuting by bike 🚴‍♂️ for environmental and health reasons!",
   funItem2:
-    "I'm a good listener 👂 and a source of innovative ideas for solving complex challenges",
+    "I am adaptable and a source of innovative ideas for solving complex challenges.",
   funItem3:
-    "Passionate about swimming 🏊‍♂️ and certified level 1 scuba diver",
+    "Passionate about swimming 🏊‍♂️ and a certified Level 1 scuba diver.",
 };

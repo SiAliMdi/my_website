@@ -6,15 +6,19 @@ description: "My academic journey and continuous learning path in computer scien
       degree: "🔬 PhD in Computer Science",
       institution: "🏛️ University of Nîmes, Nîmes",
       year: "📅 2020 - 2025",
+      status: "✅ Completed",
+      statusDescription: "🎓 PhD Achieved",
       description: [
         '📝 Thesis entitled: "Predictive justice: towards automatic annotation of court decisions"',
         "🤖 Specializing in Natural Language Processing applied to the legal domain.",
         "🧠 Research focus on developing AI models for automated legal text analysis and transformation.",
-        "🎯 Public defense: scheduled for July 16, 2025.",
+        "🎯 Successfully defended on July 16, 2025.",
       ],
-      certifUrl: "https://drive.google.com/file/d/1BTfDieiQ6n3A664UwNeaM6lOWXeVoTAU/preview",
+      certifUrl: import.meta.env.VITE_PHD_CERTIFICATE_URL,
       certifBtnTxt: "View Certificate",
-      certifDesc: "Official Certificate Available"
+      certifDesc: "Official Certificate Available",
+      juryBtnTxt: "View Jury Report",
+      juryReportUrl: import.meta.env.VITE_PHD_JURY_REPORT_URL,
     },
     {
       degree:
@@ -22,6 +26,8 @@ description: "My academic journey and continuous learning path in computer scien
       institution:
         "🏛️ Higher National School of Computer Science (ESI ex. INI), Algiers",
       year: "📅 2015 - 2020",
+      status: "✅ Completed",
+      statusDescription: "🏆 With Distinction",
       description: [
         "🎯 Specialization: Information systems.",
         "🏆 Honors: With high distinction.",
@@ -34,7 +40,7 @@ description: "My academic journey and continuous learning path in computer scien
         "📚 2 years of integrated preparatory cycle training with modules in mathematics, physics, and electronics.",
         "✅ Passed the competitive exam for entry into the advanced cycle.",
       ],
-      certifUrl: "https://drive.google.com/file/d/1ZRqajFRgw2ZVPGQ2sIv0Ix-1WMf12Lah/preview",
+      certifUrl: import.meta.env.VITE_ENG_CERTIFICATE_URL,
       certifBtnTxt: "View Certificate",
       certifDesc: "Official Certificate Available"
     },

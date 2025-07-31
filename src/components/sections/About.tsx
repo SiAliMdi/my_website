@@ -229,7 +229,7 @@ const About: React.FC = () => {
 
                 <div className="flex items-start bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] group">
                   <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white text-xl">👂</span>
+                    <span className="text-white text-xl">🌟</span>
                   </div>
                   <span className="text-gray-700 leading-relaxed text-lg group-hover:text-gray-900 transition-colors">
                     {content.funItem2}

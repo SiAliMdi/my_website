@@ -19,10 +19,14 @@ interface EducationItem {
   degree: string;
   institution: string;
   year: string;
+  status: string;
+  statusDescription: string;
   description: string[];
-    certifUrl: string; 
-    certifBtnTxt: string;
-    certifDesc: string;
+  certifUrl: string; 
+  certifBtnTxt: string;
+  certifDesc: string;
+  juryBtnTxt: string;
+  juryReportUrl: string;
 }
 
 interface EducationContent {

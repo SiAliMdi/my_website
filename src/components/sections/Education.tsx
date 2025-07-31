@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContent } from '../../hooks/useContent';
 import type { EducationContent } from '../../types/SectionsContents';
-import { FaExternalLinkAlt, FaCertificate, FaEye } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaCertificate, FaEye, FaFileAlt } from 'react-icons/fa';
 
 const Education: React.FC = () => {
   const { content, loading, error } = useContent<EducationContent>('education');
@@ -89,6 +89,18 @@ const Education: React.FC = () => {
                               </span>
                               <FaExternalLinkAlt className="ml-2 group-hover/cert:translate-x-1 transition-transform" size={12} />
                             </button>
+
+                            {item.juryReportUrl && (
+                              <button
+                                onClick={() => handleCertificationView(item.juryReportUrl)}
+                                className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-6 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg font-medium text-sm group/jury"
+                                title="View Jury Report"
+                              >
+                                <FaFileAlt className="mr-2 group-hover/jury:scale-110 transition-transform" size={16} />
+                                <span>{item.juryBtnTxt}</span>
+                                <FaExternalLinkAlt className="ml-2 group-hover/jury:translate-x-1 transition-transform" size={12} />
+                              </button>
+                            )}
                           </div>
                         </div>
 
@@ -116,34 +128,24 @@ const Education: React.FC = () => {
                         <div className="mt-6 pt-6 border-t border-gray-100">
                           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-3 sm:space-y-0">
                             <div className="flex flex-wrap items-center gap-2">
-                              {index === 0 && (
+                              
                                 <>
                                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
-                                    🎯 In Progress
+                                    {item.status}
                                   </span>
                                   <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800 border border-yellow-200">
-                                    🔬 Research Phase
+                                    {item.statusDescription}
                                   </span>
                                 </>
-                              )}
+                              
 
-                              {index === 1 && (
-                                <>
-                                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 border border-blue-200">
-                                    ✅ Completed
-                                  </span>
-                                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200">
-                                    🏆 With Distinction
-                                  </span>
-                                </>
-                              )}
                             </div>
 
                             {/* Certificate Preview Info */}
-                            <div className="flex items-center space-x-2 text-xs text-gray-500">
+                            {/*<div className="flex items-center space-x-2 text-xs text-gray-500">
                               <FaEye size={12} />
                               <span>Click certificate to view official document</span>
-                            </div>
+                            </div>*/}
                           </div>
                         </div>
 
