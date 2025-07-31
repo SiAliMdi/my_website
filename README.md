@@ -45,7 +45,19 @@ my_website/
    npm run dev
    ```
 
-5. Open your browser and go to `http://localhost:3001` to view the website.
+1. Open your browser and go to `http://localhost:3000` to view the website.
+
+# For Docker instructions:
+1. Build the Docker image:
+   ```
+   docker build -t my_website .
+   ```
+2. Run the Docker container:
+   ```
+   docker run --name my_website -d --rm -p 3000:3000 my_website
+   ```
+1. Open your browser and go to `http://localhost:3000` to view the website.
+
 
 ## License
 
