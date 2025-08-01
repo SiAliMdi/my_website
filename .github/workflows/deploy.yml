@@ -14,6 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # Install Heroku CLI
+      - name: Install Heroku CLI
+        run: |
+          curl https://cli-assets.heroku.com/install.sh | sh
+
       # Log in to Heroku Container Registry
       - name: Log in to Heroku Container Registry
         run: |
