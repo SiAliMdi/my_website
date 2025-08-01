@@ -16,8 +16,6 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Expose the port the app runs on
-EXPOSE 3000
-
 # Start the application
-CMD ["npm", "run", "preview"]
+#CMD ["npm", "run", "preview"]
+CMD ["sh", "-c", "vite preview --port $PORT --host 0.0.0.0"]
