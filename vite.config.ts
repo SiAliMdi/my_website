@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   server: {
-    port: process.env.VITE_PORT ? parseInt(process.env.VITE_PORT) : 3000,
+    port: parseInt(process.env.VITE_PORT || "3000"),
     host: "0.0.0.0" //process.env.VITE_HOST || "localhost",
   },
   build: {
