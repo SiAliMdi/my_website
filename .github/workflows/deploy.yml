@@ -24,6 +24,19 @@ jobs:
         run: |
           echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
 
+      # Set Heroku stack to container
+      - name: Set Heroku stack to container
+        run: |
+          heroku stack:set container --app $HEROKU_APP_NAME
+
+      # Set environment variables in Heroku
+      - name: Set Heroku environment variables
+        run: |
+          heroku config:set VITE_PHD_CERTIFICATE_URL=$VITE_PHD_CERTIFICATE_URL \
+                           VITE_PHD_JURY_REPORT_URL=$VITE_PHD_JURY_REPORT_URL \
+                           VITE_ENG_CERTIFICATE_URL=$VITE_ENG_CERTIFICATE_URL \
+                           --app $HEROKU_APP_NAME
+
       # Build and push the Docker image to Heroku
       - name: Build and push Docker image
         run: |
@@ -39,3 +52,6 @@ jobs:
       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
       HEROKU_EMAIL: ${{ secrets.HEROKU_EMAIL }}
+      VITE_PHD_CERTIFICATE_URL: ${{ secrets.VITE_PHD_CERTIFICATE_URL }}
+      VITE_PHD_JURY_REPORT_URL: ${{ secrets.VITE_PHD_JURY_REPORT_URL }}
+      VITE_ENG_CERTIFICATE_URL: ${{ secrets.VITE_ENG_CERTIFICATE_URL }}
