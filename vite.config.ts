@@ -18,5 +18,12 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, 'dist'),
   },
+  preview: {
+    allowedHosts: ["sialimdi.page"],
+    https: {
+      key: path.resolve(__dirname, 'certs', 'server.key'),
+      cert: path.resolve(__dirname, 'certs', 'fullchain.crt'),
+    },
+  },
   publicDir: path.resolve(__dirname, 'public'),
 })

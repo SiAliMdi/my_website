@@ -17,5 +17,4 @@ COPY . .
 RUN npm run build
 
 # Start the application
-#CMD ["npm", "run", "preview"]
-CMD ["sh", "-c", "vite preview --port $PORT --host 0.0.0.0"]
+CMD ["npm", "run", "preview"]
