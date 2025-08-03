@@ -13,8 +13,14 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Accept build arguments for environment variables
+ARG VITE_PORT
+ARG VITE_HK_HOST_1
+ARG VITE_HK_HOST_2
+ARG VITE_HK_HOST_3
+
 # Build the application
-RUN npm run build
+RUN VITE_PORT=$VITE_PORT VITE_HK_HOST_1=$VITE_HK_HOST_1 VITE_HK_HOST_2=$VITE_HK_HOST_2 VITE_HK_HOST_3=$VITE_HK_HOST_3 npm run build
 
 # Start the application
 CMD ["npm", "run", "preview"]
