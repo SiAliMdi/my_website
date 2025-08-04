@@ -35,6 +35,7 @@ jobs:
           heroku config:set VITE_PHD_CERTIFICATE_URL=$VITE_PHD_CERTIFICATE_URL \
                            VITE_PHD_JURY_REPORT_URL=$VITE_PHD_JURY_REPORT_URL \
                            VITE_ENG_CERTIFICATE_URL=$VITE_ENG_CERTIFICATE_URL \
+                           VITE_CV_URL=$VITE_CV_URL \
                            VITE_HK_HOST_1=$VITE_HK_HOST_1 \
                            VITE_HK_HOST_2=$VITE_HK_HOST_2 \
                            VITE_HK_HOST_3=$VITE_HK_HOST_3 \
@@ -48,6 +49,10 @@ jobs:
                        --build-arg VITE_HK_HOST_1=$VITE_HK_HOST_1  \
                        --build-arg VITE_HK_HOST_2=$VITE_HK_HOST_2  \
                        --build-arg VITE_HK_HOST_3=$VITE_HK_HOST_3  \
+                        --build-arg VITE_CV_URL=$VITE_CV_URL  \
+                        --build-arg VITE_ENG_CERTIFICATE_URL=$VITE_ENG_CERTIFICATE_URL  \
+                        --build-arg VITE_PHD_CERTIFICATE_URL=$VITE_PHD_CERTIFICATE_URL  \
+                        --build-arg VITE_PHD_JURY_REPORT_URL=$VITE_PHD_JURY_REPORT_URL  \
                        -t registry.heroku.com/$HEROKU_APP_NAME/web .
           docker push registry.heroku.com/$HEROKU_APP_NAME/web
 
@@ -63,6 +68,7 @@ jobs:
       VITE_PHD_CERTIFICATE_URL: ${{ secrets.VITE_PHD_CERTIFICATE_URL }}
       VITE_PHD_JURY_REPORT_URL: ${{ secrets.VITE_PHD_JURY_REPORT_URL }}
       VITE_ENG_CERTIFICATE_URL: ${{ secrets.VITE_ENG_CERTIFICATE_URL }}
+      VITE_CV_URL: ${{ secrets.VITE_CV_URL }}
       VITE_HK_HOST_1: ${{ secrets.VITE_HK_HOST_1 }}
       VITE_HK_HOST_2: ${{ secrets.VITE_HK_HOST_2  }}
       VITE_HK_HOST_3: ${{ secrets.VITE_HK_HOST_3 }}

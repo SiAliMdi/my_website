@@ -8,8 +8,7 @@ import type { HeroContent } from '../../types/SectionsContents';
 const Hero: React.FC = () => {
   const { content, loading, error } = useContent<HeroContent>('hero');
 
-  // Google Drive PDF URL
-  const cvUrl = "https://drive.google.com/file/d/1zTx9w0p4qZsUEqnTO0nuf98H7LPav2ty/preview";
+  const cvUrl = import.meta.env.VITE_CV_URL; 
 
   const fileId = "1gXqYJD1bDqBwexytdvC5vwwTkZniSd6G";
   const myPhoto = `https://lh3.googleusercontent.com/d/${fileId}=w2000?authuser=0`;
